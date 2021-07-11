@@ -80,4 +80,34 @@ img {
     z-index: 10;
 }
 
-
+.container {
+    background: #91969b;
+    min-width: 90%;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+label {
+    color: white;
+    background-color: rgb(228, 61, 95);
+    padding: 10px;
+    border-radius: 7px;
+}
+#large {
+    display: none;
+}
+#large:checked ~ .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+#colspan {
+    display: none;
+}
+#colspan:checked ~ .landscape {
+    grid-column: span 1;
+}
+#rowspan {
+    display: none;
+}
+#rowspan:checked ~ .potrait {
+    grid-row: span 1;
+}
